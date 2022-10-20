@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Ancop App</string>
+    <string name="splashscreen_ancop">ANCOP</string>
+    <string name="splash_screen_content_description">Splash screen</string>
+    <string name="get_started">Get Started</string>
+    <string name="this_app_is_decided_to_the_ancop_family_gregory_university">Decided to the ANCOP family, Gregory university Uturu. This app helps to keep you posted on what\'s going on in ANCOP guu. </string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="ancop_logo_content_description">ANCOP logo</string>
+    <string name="full_name">Full name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="admin">Admin</string>
+    <string name="have_an_account">Have an Account?</string>
+    <string name="no_account_yet">No account yet?</string>
+    <string name="create_one">Create one</string>
+    <string name="user_design_image">User_design_image</string>
+    <string name="please_wait">Please wait</string>
+</resources>

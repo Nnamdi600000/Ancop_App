@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="@dimen/dimen_15">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/ancop_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dimen_60"
+            android:layout_marginBottom="@dimen/dimen_20"
+            android:fontFamily="@font/aclonica"
+            android:text="@string/splashscreen_ancop"
+            android:textColor="@color/dark_green"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/ancop_logo_id"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/ancop_logo_id"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/dimen_15"
+            android:contentDescription="@string/ancop_logo_content_description"
+            android:padding="@dimen/dimen_10"
+            android:src="@drawable/screenshot_20211204_203421"
+            app:layout_constraintBottom_toTopOf="@id/get_started_id"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/get_started_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="60dp"
+            android:layout_marginBottom="@dimen/dimen_15"
+            android:fontFamily="@font/aclonica"
+            android:text="@string/get_started"
+            android:textColor="@color/dark_green"
+            android:textSize="22sp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toTopOf="@id/text_view_details_id"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/text_view_details_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_110"
+            android:gravity="center"
+            android:padding="@dimen/dimen_10"
+            android:text="@string/this_app_is_decided_to_the_ancop_family_gregory_university"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dimen_20_sp"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toTopOf="@id/btn_login_get_started"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_login_get_started"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_60"
+            android:layout_marginStart="@dimen/dimen_25"
+            android:layout_marginEnd="@dimen/dimen_25"
+            android:layout_marginBottom="@dimen/dimen_10"
+            android:text="@string/login"
+            app:cornerRadius="10dp"
+            app:layout_constraintBottom_toTopOf="@id/btn_register_get_started" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_register_get_started"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_60"
+            android:layout_marginStart="@dimen/dimen_25"
+            android:layout_marginEnd="@dimen/dimen_25"
+            android:layout_marginBottom="@dimen/dimen_35"
+            android:text="@string/register"
+            app:cornerRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

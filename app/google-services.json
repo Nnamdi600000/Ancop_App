@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "847190684534",
+    "project_id": "ancop-ca005",
+    "storage_bucket": "ancop-ca005.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:847190684534:android:498328d71f8909035c0057",
+        "android_client_info": {
+          "package_name": "com.codennamdi.ancopapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "847190684534-4lvcguchf2rafcv4adn2fbcueqbahk4d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAd_wN8P7LbtKsbY795z1s0HDuOiPfLxhs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "847190684534-4lvcguchf2rafcv4adn2fbcueqbahk4d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
