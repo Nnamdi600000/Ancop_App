@@ -6,6 +6,8 @@ import android.text.TextUtils
 import android.widget.Toast
 import com.codennamdi.ancopapp.R
 import com.codennamdi.ancopapp.databinding.ActivityRegisterBinding
+import com.codennamdi.ancopapp.firebase.FirestoreClass
+import com.codennamdi.ancopapp.models.User
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 
@@ -65,22 +67,25 @@ class RegisterActivity : BaseActivity() {
             showProgressDialog(resources.getString(R.string.please_wait))
             FirebaseAuth.getInstance().createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener { task ->
-                    hideProgressDialog()
                     if (task.isSuccessful) {
                         val firebaseUser: FirebaseUser = task.result!!.user!!
                         val registeredEmail = firebaseUser.email!!
-                        Toast.makeText(
-                            this,
-                            "$fullName you have successfully registered with this email $registeredEmail",
-                            Toast.LENGTH_LONG
-                        ).show()
-                        FirebaseAuth.getInstance().signOut()
-                        finish()
+                        val user = User(firebaseUser.uid, fullName, registeredEmail)
+                        FirestoreClass().registerUser(this@RegisterActivity, user)
+                        // finish()
                     } else {
                         Toast.makeText(this, task.exception!!.message, Toast.LENGTH_SHORT).show()
+                        hideProgressDialog()
                     }
                 }
-
         }
+    }
+
+    fun userRegisteredSuccessful() {
+        Toast.makeText(this@RegisterActivity, "You have registered successfully", Toast.LENGTH_LONG)
+            .show()
+        hideProgressDialog()
+        FirebaseAuth.getInstance().signOut()
+        finish()
     }
 }

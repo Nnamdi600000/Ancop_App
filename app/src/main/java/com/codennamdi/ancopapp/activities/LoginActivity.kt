@@ -8,6 +8,8 @@ import android.util.Log
 import android.widget.Toast
 import com.codennamdi.ancopapp.R
 import com.codennamdi.ancopapp.databinding.ActivityLoginBinding
+import com.codennamdi.ancopapp.firebase.FirestoreClass
+import com.codennamdi.ancopapp.models.User
 import com.google.firebase.auth.FirebaseAuth
 
 class LoginActivity : BaseActivity() {
@@ -65,9 +67,7 @@ class LoginActivity : BaseActivity() {
                     if (task.isSuccessful) {
                         hideProgressDialog()
                         // Sign in success, update UI with the signed-in user's information
-                        Toast.makeText(this, "Logged in", Toast.LENGTH_LONG).show()
-                        startActivity(Intent(this@LoginActivity, MainActivity::class.java))
-                        finish()
+                        FirestoreClass().loginUser(this@LoginActivity)
                     } else {
                         hideProgressDialog()
                         // If sign in fails, display a message to the user.
@@ -79,5 +79,12 @@ class LoginActivity : BaseActivity() {
                     }
                 }
         }
+    }
+
+    fun loginSuccess(user: User) {
+        hideProgressDialog()
+        Toast.makeText(this, "Logged in", Toast.LENGTH_LONG).show()
+        startActivity(Intent(this@LoginActivity, MainActivity::class.java))
+        finish()
     }
 }
