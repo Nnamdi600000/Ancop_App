@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/news_feed"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="@string/news_feed" />
+
+    <item
+        android:id="@+id/Hymns"
+        android:icon="@drawable/ic_baseline_menu_book_24"
+        android:title="@string/hymns" />
+
+    <item
+        android:id="@+id/leaders"
+        android:icon="@drawable/ic_baseline_group_24"
+        android:title="@string/leaders" />
+
+    <item
+        android:id="@+id/library"
+        android:icon="@drawable/ic_baseline_library_books_24"
+        android:title="@string/library" />
+
+    <item
+        android:id="@+id/chapeline_bio"
+        android:icon="@drawable/ic_baseline_account_circle_24_light"
+        android:title="@string/chapeline" />
+
+</menu>
