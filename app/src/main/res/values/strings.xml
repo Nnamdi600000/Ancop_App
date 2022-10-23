@@ -19,11 +19,9 @@
     <string name="profile">Profile</string>
     <string name="settings">Settings</string>
     <string name="sign_out">Sign out</string>
-    <string name="news_feed">News Feed</string>
+    <string name="home">Home</string>
     <string name="hymns">Hymns</string>
     <string name="leaders">Leaders</string>
     <string name="library">Library</string>
     <string name="chapeline">Chapeline</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

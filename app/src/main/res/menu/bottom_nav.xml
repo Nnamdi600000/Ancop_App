@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/news_feed"
+        android:id="@+id/home_menu_id"
         android:icon="@drawable/ic_baseline_home_24"
-        android:title="@string/news_feed" />
+        android:title="@string/home" />
 
     <item
         android:id="@+id/Hymns"
