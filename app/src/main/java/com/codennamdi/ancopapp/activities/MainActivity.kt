@@ -6,12 +6,15 @@ import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.commit
+import com.bumptech.glide.Glide
 import com.codennamdi.ancopapp.R
 import com.codennamdi.ancopapp.databinding.ActivityMainBinding
+import com.codennamdi.ancopapp.firebase.FirestoreClass
 import com.codennamdi.ancopapp.fragments.ChapelineFragment
 import com.codennamdi.ancopapp.fragments.HomeFragment
 import com.codennamdi.ancopapp.fragments.HymnFrament
 import com.codennamdi.ancopapp.fragments.LeadersFragment
+import com.codennamdi.ancopapp.models.User
 import com.google.android.material.navigation.NavigationBarView
 
 class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListener {
@@ -22,7 +25,11 @@ class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        title = getString(R.string.home)
+        setSupportActionBar(binding.mainActivityToolbarId)
         binding.bottomNav.setOnItemSelectedListener(this)
+
+        FirestoreClass().loginUser(this@MainActivity)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -77,6 +84,7 @@ class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
         supportFragmentManager.commit {
             replace(R.id.fragment_container_view_id, HomeFragment())
         }
+        title = getString(R.string.home)
         return true
     }
 
@@ -84,6 +92,7 @@ class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
         supportFragmentManager.commit {
             replace(R.id.fragment_container_view_id, HymnFrament())
         }
+        title = getString(R.string.hymns)
         return true
     }
 
@@ -91,6 +100,7 @@ class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
         supportFragmentManager.commit {
             replace(R.id.fragment_container_view_id, LeadersFragment())
         }
+        title = getString(R.string.leaders)
         return true
     }
 
@@ -98,6 +108,7 @@ class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
         supportFragmentManager.commit {
             replace(R.id.fragment_container_view_id, HymnFrament())
         }
+        title = getString(R.string.library)
         return true
     }
 
@@ -105,6 +116,16 @@ class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
         supportFragmentManager.commit {
             replace(R.id.fragment_container_view_id, ChapelineFragment())
         }
+        title = getString(R.string.chapeline_bio)
         return true
+    }
+
+    fun loadActionBarUserImage(user: User) {
+        Glide
+            .with(this@MainActivity)
+            .load(user.image)
+            .centerCrop()
+            .placeholder(R.drawable.profile_place_holder)
+            .into(binding.ivToolbarProfileImageId)
     }
 }

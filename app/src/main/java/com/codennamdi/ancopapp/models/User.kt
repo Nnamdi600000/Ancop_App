@@ -5,6 +5,7 @@ import android.os.Parcelable
 
 data class User(
     val id: String = "",
+    val image: String = "",
     val name: String = "",
     val email: String = "",
     val mobileNumber: Long = 0,
@@ -12,6 +13,7 @@ data class User(
     val fcmToken: String = ""
 ) : Parcelable {
     constructor(parcel: Parcel) : this(
+        parcel.readString()!!,
         parcel.readString()!!,
         parcel.readString()!!,
         parcel.readString()!!,

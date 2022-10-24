@@ -24,4 +24,6 @@
     <string name="leaders">Leaders</string>
     <string name="library">Library</string>
     <string name="chapeline">Chapeline</string>
+    <string name="chapeline_bio">About Chapeline</string>
+    <string name="profile_image">Profile Image</string>
 </resources>

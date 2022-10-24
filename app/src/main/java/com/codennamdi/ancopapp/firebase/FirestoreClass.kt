@@ -1,7 +1,9 @@
 package com.codennamdi.ancopapp.firebase
 
+import android.app.Activity
 import android.util.Log
 import com.codennamdi.ancopapp.activities.LoginActivity
+import com.codennamdi.ancopapp.activities.MainActivity
 import com.codennamdi.ancopapp.activities.RegisterActivity
 import com.codennamdi.ancopapp.models.User
 import com.codennamdi.ancopapp.utils.Constants
@@ -28,19 +30,34 @@ class FirestoreClass {
             }
     }
 
-    fun loginUser(activity: LoginActivity) {
+    fun loginUser(activity: Activity) {
         mFireStore.collection(Constants.USERS)
             .document(getCurrentUserId()).get()
             .addOnSuccessListener { document ->
                 val loggedInUser =
                     document.toObject(User::class.java) //Here we are getting the logged in details
 
-                if (loggedInUser != null) {
-                    activity.loginSuccess(loggedInUser)
+                when (activity) {
+                    is LoginActivity -> {
+                        if (loggedInUser != null)
+                            activity.loginSuccess(loggedInUser)
+                    }
+
+                    is MainActivity -> {
+                        if (loggedInUser != null)
+                            activity.loadActionBarUserImage(loggedInUser)
+                    }
                 }
             }
 
             .addOnFailureListener { e ->
+
+                when (activity) {
+                    is LoginActivity -> {
+                        activity.hideProgressDialog()
+                    }
+                }
+
                 Log.e(
                     activity.javaClass.simpleName,
                     "Error writing document",
