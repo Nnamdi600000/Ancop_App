@@ -20,7 +20,6 @@
             android:layout_marginBottom="@dimen/dimen_20"
             android:fontFamily="@font/aclonica"
             android:text="@string/splashscreen_ancop"
-            android:textColor="@color/dark_green"
             android:textSize="35sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@id/ancop_logo_id"
@@ -49,7 +48,7 @@
             android:layout_marginBottom="@dimen/dimen_15"
             android:fontFamily="@font/aclonica"
             android:text="@string/get_started"
-            android:textColor="@color/dark_green"
+
             android:textSize="22sp"
             android:textStyle="normal"
             app:layout_constraintBottom_toTopOf="@id/text_view_details_id"
@@ -64,7 +63,7 @@
             android:gravity="center"
             android:padding="@dimen/dimen_10"
             android:text="@string/this_app_is_decided_to_the_ancop_family_gregory_university"
-            android:textColor="@color/black"
+
             android:textSize="@dimen/dimen_20_sp"
             android:textStyle="italic"
             app:layout_constraintBottom_toTopOf="@id/btn_login_get_started"

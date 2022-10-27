@@ -10,8 +10,7 @@
         android:id="@+id/main_activity_toolbar_id"
         android:layout_width="match_parent"
         android:layout_height="?actionBarSize"
-        android:background="@color/dark_green"
-        android:theme="@style/Theme.AncopApp.App"
+        android:background="?attr/colorPrimaryVariant"
         app:layout_constraintTop_toTopOf="parent"
         app:titleTextColor="@color/white" />
 

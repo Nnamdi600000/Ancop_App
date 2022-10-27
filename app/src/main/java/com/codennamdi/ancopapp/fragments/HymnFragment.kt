@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.codennamdi.ancopapp.R
 
-class HymnFrament : Fragment() {
+class HymnFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -21,5 +21,4 @@ class HymnFrament : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
     }
-
 }

@@ -2,9 +2,11 @@ package com.codennamdi.ancopapp.firebase
 
 import android.app.Activity
 import android.util.Log
+import android.widget.Toast
 import com.codennamdi.ancopapp.activities.LoginActivity
 import com.codennamdi.ancopapp.activities.MainActivity
 import com.codennamdi.ancopapp.activities.RegisterActivity
+import com.codennamdi.ancopapp.activities.UserProfileActivity
 import com.codennamdi.ancopapp.models.User
 import com.codennamdi.ancopapp.utils.Constants
 import com.google.firebase.auth.FirebaseAuth
@@ -30,7 +32,22 @@ class FirestoreClass {
             }
     }
 
-    fun loginUser(activity: Activity) {
+    fun updateUserProfileData(activity: UserProfileActivity, userHashMap: HashMap<String, Any>) {
+        mFireStore.collection(Constants.USERS)
+            .document(getCurrentUserId())
+            .update(userHashMap)
+            .addOnSuccessListener {
+                Log.e(javaClass.simpleName, "Profile data updated successfully!")
+                Toast.makeText(activity, "Profile updated successfully", Toast.LENGTH_LONG).show()
+                activity.profileUpdateSuccess()
+            }.addOnFailureListener { e ->
+                Log.e(activity.javaClass.simpleName, "Error while updating user details!", e)
+                Toast.makeText(activity, "Error while updating your details", Toast.LENGTH_LONG)
+                    .show()
+            }
+    }
+
+    fun loadUserData(activity: Activity) {
         mFireStore.collection(Constants.USERS)
             .document(getCurrentUserId()).get()
             .addOnSuccessListener { document ->
@@ -46,6 +63,11 @@ class FirestoreClass {
                     is MainActivity -> {
                         if (loggedInUser != null)
                             activity.loadActionBarUserImage(loggedInUser)
+                    }
+
+                    is UserProfileActivity -> {
+                        if (loggedInUser != null)
+                            activity.setUserDataInUi(loggedInUser)
                     }
                 }
             }

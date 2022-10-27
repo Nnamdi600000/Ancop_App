@@ -5,9 +5,9 @@ import android.os.Parcelable
 
 data class User(
     val id: String = "",
-    val image: String = "",
     val name: String = "",
     val email: String = "",
+    val image: String = "",
     val mobileNumber: Long = 0,
     val churchPosition: String = "",
     val fcmToken: String = ""
@@ -26,6 +26,7 @@ data class User(
         parcel.writeString(id)
         parcel.writeString(name)
         parcel.writeString(email)
+        parcel.writeString(image)
         parcel.writeLong(mobileNumber)
         parcel.writeString(churchPosition)
         parcel.writeString(fcmToken)

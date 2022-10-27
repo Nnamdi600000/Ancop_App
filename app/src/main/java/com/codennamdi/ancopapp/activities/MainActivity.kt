@@ -1,9 +1,9 @@
 package com.codennamdi.ancopapp.activities
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.commit
 import com.bumptech.glide.Glide
@@ -12,10 +12,11 @@ import com.codennamdi.ancopapp.databinding.ActivityMainBinding
 import com.codennamdi.ancopapp.firebase.FirestoreClass
 import com.codennamdi.ancopapp.fragments.ChapelineFragment
 import com.codennamdi.ancopapp.fragments.HomeFragment
-import com.codennamdi.ancopapp.fragments.HymnFrament
+import com.codennamdi.ancopapp.fragments.HymnFragment
 import com.codennamdi.ancopapp.fragments.LeadersFragment
 import com.codennamdi.ancopapp.models.User
 import com.google.android.material.navigation.NavigationBarView
+import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListener {
     private lateinit var binding: ActivityMainBinding
@@ -29,7 +30,7 @@ class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
         setSupportActionBar(binding.mainActivityToolbarId)
         binding.bottomNav.setOnItemSelectedListener(this)
 
-        FirestoreClass().loginUser(this@MainActivity)
+        FirestoreClass().loadUserData(this@MainActivity)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -39,17 +40,19 @@ class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
 
     override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
         (R.id.profile) -> {
-            Toast.makeText(this, "Clicked Profile", Toast.LENGTH_LONG).show()
+            startActivity(Intent(this@MainActivity, UserProfileActivity::class.java))
             true
         }
 
         (R.id.settings) -> {
-            Toast.makeText(this, "Clicked Settings", Toast.LENGTH_LONG).show()
+            startActivity(Intent(this@MainActivity, SettingsActivity::class.java))
             true
         }
 
         (R.id.sign_out) -> {
-            Toast.makeText(this, "Clicked Sign out", Toast.LENGTH_LONG).show()
+            FirebaseAuth.getInstance().signOut()
+            startActivity(Intent(this@MainActivity, GetStartedActivity::class.java))
+            finish()
             true
         }
 
@@ -90,7 +93,7 @@ class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
 
     private fun clickedHymnsNavBtn(): Boolean {
         supportFragmentManager.commit {
-            replace(R.id.fragment_container_view_id, HymnFrament())
+            replace(R.id.fragment_container_view_id, HymnFragment())
         }
         title = getString(R.string.hymns)
         return true
@@ -106,7 +109,7 @@ class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
 
     private fun clickedLibraryNavBtn(): Boolean {
         supportFragmentManager.commit {
-            replace(R.id.fragment_container_view_id, HymnFrament())
+            replace(R.id.fragment_container_view_id, HymnFragment())
         }
         title = getString(R.string.library)
         return true

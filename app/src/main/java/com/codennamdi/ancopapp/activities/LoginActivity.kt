@@ -21,7 +21,7 @@ class LoginActivity : BaseActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        title = "Login"
+        title = getString(R.string.login)
         supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_ios_24)
         setUpClickListeners()
         mAuth = FirebaseAuth.getInstance()
@@ -67,7 +67,7 @@ class LoginActivity : BaseActivity() {
                     if (task.isSuccessful) {
                         hideProgressDialog()
                         // Sign in success, update UI with the signed-in user's information
-                        FirestoreClass().loginUser(this@LoginActivity)
+                        FirestoreClass().loadUserData(this@LoginActivity)
                     } else {
                         hideProgressDialog()
                         // If sign in fails, display a message to the user.
@@ -82,7 +82,6 @@ class LoginActivity : BaseActivity() {
     }
 
     fun loginSuccess(user: User) {
-        hideProgressDialog()
         Toast.makeText(this, "Logged in", Toast.LENGTH_LONG).show()
         startActivity(Intent(this@LoginActivity, MainActivity::class.java))
         finish()
