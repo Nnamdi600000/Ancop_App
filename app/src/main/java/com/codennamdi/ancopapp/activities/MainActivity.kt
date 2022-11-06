@@ -10,10 +10,7 @@ import com.bumptech.glide.Glide
 import com.codennamdi.ancopapp.R
 import com.codennamdi.ancopapp.databinding.ActivityMainBinding
 import com.codennamdi.ancopapp.firebase.FirestoreClass
-import com.codennamdi.ancopapp.fragments.ChapelineFragment
-import com.codennamdi.ancopapp.fragments.HomeFragment
-import com.codennamdi.ancopapp.fragments.HymnFragment
-import com.codennamdi.ancopapp.fragments.LeadersFragment
+import com.codennamdi.ancopapp.fragments.*
 import com.codennamdi.ancopapp.models.User
 import com.google.android.material.navigation.NavigationBarView
 import com.google.firebase.auth.FirebaseAuth
@@ -31,6 +28,13 @@ class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
         binding.bottomNav.setOnItemSelectedListener(this)
 
         FirestoreClass().loadUserData(this@MainActivity)
+        setOnClickListener()
+    }
+
+    private fun setOnClickListener() {
+        binding.ivToolbarProfileImageId.setOnClickListener {
+            startActivity(Intent(this@MainActivity, UserProfileActivity::class.java))
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -39,8 +43,8 @@ class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
     }
 
     override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
-        (R.id.profile) -> {
-            startActivity(Intent(this@MainActivity, UserProfileActivity::class.java))
+        (R.id.refresh) -> {
+            FirestoreClass().loadUserData(this@MainActivity)
             true
         }
 
@@ -109,7 +113,7 @@ class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
 
     private fun clickedLibraryNavBtn(): Boolean {
         supportFragmentManager.commit {
-            replace(R.id.fragment_container_view_id, HymnFragment())
+            replace(R.id.fragment_container_view_id, LibraryFragment())
         }
         title = getString(R.string.library)
         return true

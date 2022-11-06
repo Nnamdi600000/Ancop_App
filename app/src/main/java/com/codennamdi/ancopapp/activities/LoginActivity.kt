@@ -36,6 +36,10 @@ class LoginActivity : BaseActivity() {
         binding.btnLoginActivityLogin.setOnClickListener {
             loginRegisteredUser()
         }
+
+        binding.textViewForgotPasswordId.setOnClickListener {
+            Toast.makeText(this@LoginActivity, "Retrieve your password", Toast.LENGTH_LONG).show()
+        }
     }
 
     private fun validateLoginForm(fullName: String, password: String): Boolean {

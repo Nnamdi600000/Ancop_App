@@ -8,7 +8,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/dimen_15"
+        android:layout_margin="@dimen/dimen_10"
         android:orientation="horizontal"
         android:padding="@dimen/dimen_5"
         app:layout_constraintTop_toTopOf="parent">
@@ -17,7 +17,8 @@
             android:id="@+id/text_view_hymn_number_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/dimen_10"
+            android:layout_marginEnd="@dimen/dimen_15"
+            android:layout_marginStart="@dimen/dimen_10"
             android:textSize="@dimen/dimen_17_sp"
             tools:text="1" />
 
@@ -26,6 +27,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="@dimen/dimen_5"
+            android:layout_marginStart="@dimen/dimen_10"
             android:textColor="@color/black"
             android:textSize="@dimen/dimen_17_sp"
             tools:text="Now that the daylight fills the sky" />

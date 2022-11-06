@@ -5,13 +5,14 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
-import com.codennamdi.ancopapp.database.HymnEntity
 import com.codennamdi.ancopapp.databinding.ItemHymnsTitlesBinding
-import com.codennamdi.ancopapp.models.HymnDataModel
+import com.codennamdi.ancopapp.models.Hymn
 
 class ItemHymnsTitleAdapter(
-    private val item: ArrayList<HymnDataModel>, private val context: Context
+    private val item: ArrayList<Hymn>,
+    private val context: Context
 ) : RecyclerView.Adapter<ItemHymnsTitleAdapter.ViewHolder>() {
+    private lateinit var onClickListener: OnClickListener
 
     class ViewHolder(binding: ItemHymnsTitlesBinding) :
         RecyclerView.ViewHolder(binding.root) {
@@ -32,11 +33,22 @@ class ItemHymnsTitleAdapter(
         holder.hymnTitle.text = item.title
 
         holder.itemView.setOnClickListener {
-            Toast.makeText(context, "Clicked!", Toast.LENGTH_LONG).show()
+            onClickListener.onClick(position, item)
         }
     }
 
     override fun getItemCount(): Int {
         return item.size
     }
+
+    //First step you create an interface
+    interface OnClickListener {
+        fun onClick(position: Int, items: Hymn)
+    }
+
+    //Secondly you would have to create an a function called setOnClickListener
+    fun setOnClickListener(onClickListener: OnClickListener) {
+        this.onClickListener = onClickListener
+    }
+
 }

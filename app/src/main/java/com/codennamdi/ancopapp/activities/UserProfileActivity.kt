@@ -37,7 +37,7 @@ import java.util.*
 
 class UserProfileActivity : BaseActivity() {
     private lateinit var binding: ActivityUserProfileBinding
-    private lateinit var profileImageResultData: Uri
+    private var profileImageResultData: Uri? = null
     private lateinit var userDetails: User
     private var profileImageUrl: String = ""
 
@@ -61,20 +61,58 @@ class UserProfileActivity : BaseActivity() {
 
     private var getAction =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
-            val profileImageFromCamera = it!!.data!!.extras!!.get("data") as Bitmap
-            profileImageResultData = saveImageToInternalStorage(profileImageFromCamera)
-            Log.e("Saved image", "$profileImageResultData")
-//            try {
-//                Glide
-//                    .with(this@UserProfileActivity)
-//                    .load(profileImageUrl)
-//                    .centerCrop()
-//                    .placeholder(R.drawable.profile_place_holder)
-//                    .into(binding.ivProfileImageId)
-//            } catch (e: IOException) {
-//                e.printStackTrace()
-//            }
+            try {
+                val profileImageFromCamera = it!!.data!!.extras!!.get("data") as Bitmap
+                profileImageResultData = saveImageToInternalStorage(profileImageFromCamera)
+                Log.e("Saved Image : ", "Path :: $profileImageResultData")
+                saveCameraPhotoToStorage()
+
+                try {
+                    Glide
+                        .with(this@UserProfileActivity)
+                        .load(profileImageUrl)
+                        .centerCrop()
+                        .placeholder(R.drawable.profile_place_holder)
+                        .into(binding.ivProfileImageId)
+                } catch (e: IOException) {
+                    e.printStackTrace()
+                }
+            } catch (e: IOException) {
+                e.printStackTrace()
+            }
+
         }
+
+    private fun saveCameraPhotoToStorage() {
+        showProgressDialog(getString(R.string.please_wait))
+        val sRef: StorageReference =
+            FirebaseStorage.getInstance().reference.child(
+                "USER_IMAGE" + System.currentTimeMillis() + "." + getFileExtension(
+                    profileImageResultData
+                )
+            )
+        profileImageResultData?.let {
+            sRef.putFile(it).addOnSuccessListener { taskSnapshot ->
+                Log.e(
+                    "Firebase image url",
+                    taskSnapshot.metadata!!.reference!!.downloadUrl.toString()
+                )
+
+                taskSnapshot.metadata!!.reference!!.downloadUrl.addOnSuccessListener { url ->
+                    Log.e(
+                        "Downloaded image url", url.toString()
+                    )
+                    profileImageUrl = url.toString()
+                    hideProgressDialog()
+                }
+            }.addOnFailureListener { exception ->
+                Toast.makeText(this@UserProfileActivity, exception.message, Toast.LENGTH_LONG)
+                    .show()
+                hideProgressDialog()
+            }
+        }
+    }
+
 
     companion object {
         private const val IMAGE_DIRECTORY = "AncopAppImages"
@@ -155,7 +193,10 @@ class UserProfileActivity : BaseActivity() {
                 override fun onPermissionsChecked(report: MultiplePermissionsReport?) {
                     if (report!!.areAllPermissionsGranted()) {
                         val pickIntent =
-                            Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
+                            Intent(
+                                Intent.ACTION_PICK,
+                                MediaStore.Images.Media.EXTERNAL_CONTENT_URI
+                            )
                         openGalleryLauncher.launch(pickIntent)
                     }
                 }
@@ -236,24 +277,26 @@ class UserProfileActivity : BaseActivity() {
                     profileImageResultData
                 )
             )
-        sRef.putFile(profileImageResultData).addOnSuccessListener { taskSnapshot ->
-            Log.e(
-                "Firebase image url",
-                taskSnapshot.metadata!!.reference!!.downloadUrl.toString()
-            )
-
-            taskSnapshot.metadata!!.reference!!.downloadUrl.addOnSuccessListener { url ->
+        profileImageResultData?.let {
+            sRef.putFile(it).addOnSuccessListener { taskSnapshot ->
                 Log.e(
-                    "Downloaded image url", url.toString()
+                    "Firebase image url",
+                    taskSnapshot.metadata!!.reference!!.downloadUrl.toString()
                 )
-                profileImageUrl = url.toString()
 
-                updateUserProfileDetails()
+                taskSnapshot.metadata!!.reference!!.downloadUrl.addOnSuccessListener { url ->
+                    Log.e(
+                        "Downloaded image url", url.toString()
+                    )
+                    profileImageUrl = url.toString()
+
+                    updateUserProfileDetails()
+                }
+            }.addOnFailureListener { exception ->
+                Toast.makeText(this@UserProfileActivity, exception.message, Toast.LENGTH_LONG)
+                    .show()
+                hideProgressDialog()
             }
-        }.addOnFailureListener { exception ->
-            Toast.makeText(this@UserProfileActivity, exception.message, Toast.LENGTH_LONG)
-                .show()
-            hideProgressDialog()
         }
     }
 
@@ -289,7 +332,8 @@ class UserProfileActivity : BaseActivity() {
     }
 
     private fun getFileExtension(uri: Uri?): String? {
-        return MimeTypeMap.getSingleton().getExtensionFromMimeType(contentResolver.getType(uri!!))
+        return MimeTypeMap.getSingleton()
+            .getExtensionFromMimeType(contentResolver.getType(uri!!))
     }
 
     fun profileUpdateSuccess() {

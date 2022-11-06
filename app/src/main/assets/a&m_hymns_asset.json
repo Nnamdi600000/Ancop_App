@@ -1,53 +1,54 @@
-[
-  {
-    "1": {
+{
+  "title": "A&M",
+  "hymns": [
+    {
       "title": "Now that the daylight fills the sky",
       "num": 1,
       "verses": [
-        "We lift our hearts to God on high,\n\n            That he, in all we do or say, \n\n            Would keep us free from harm to - day: \n\n            Would guard our hearts and tongues from strife;\n            ",
-        "From anger's din would hide our life:\n\n            From all ill sights would turn our eyes, \n\n            Would close our ears from vanities: \n\n            Would keep our inmost conscience pure;\n            ",
-        "Our souls from folly would secure;\n\n            Would bid us check the pride of sense\n\n            With due and holy abstinence.\n\n            So we, when this new day is gone, ",
-        "And night in turn is drawing on,\n\n            With conscience by the world unstained\n\n            Shall praise his name\n            for victory gained.\n\n            All laud to God the Father be;\n            ",
-        "All praise, eternal Son, to thee;\n\n            All glory, as is ever meet, \n\n            To God the holy Paraclete.\n            "
+        "1. We lift our hearts to God on high,\n   That he, in all we do or say,\n  Would keep us free from harm to - day:\n  Would guard our hearts and tongues from strife;",
+        "2. From anger's din would hide our life:\n   From all ill sights would turn our eyes,\n  Would close our ears from vanities:\n   Would keep our inmost conscience pure;",
+        "3. Our souls from folly would secure;\n   Would bid us check the pride of sense\n   With due and holy abstinence.\n   So we, when this new day is gone,",
+        "4. And night in turn is drawing on,\n     With conscience by the world unstained\n   Shall praise his name for victory gained.\n All laud to God the Father be;",
+        "5. All praise, eternal Son, to thee;\n   All glory, as is ever meet,\n   To God the holy Paraclete."
       ]
     },
-    "2": {
+    {
       "title": " O splendour of God's glory bright",
       "num": 2,
       "verses": [
-        "Who bringest forth the light from Light;\n\n            O Light, of light the fountain - spring;\n\n            O Day, our days illumining;\n            ",
-        "Come, very Sun of truth and love,\n\n            Come in thy radiance from above, \n\n            And shed the Holy Spirit 's ray\n\n            On all we think or do to - day.\n            ",
-        "Teach us to work with all our might;\n\n            Put Satan 's fierce assaults to flight;\n\n            Turn all to good that seems most ill;\n\n            Help us our calling to fulfil.\n            ",
-        "O joyful be the livelong day,\n\n            Our thoughts as pure as morning ray, \n\n            Our faith like noonday 's glowing height,\n\n            Our souls undimmed by shades of night.\n            ",
-        "All praise to God the Father be,\n\n            All praise, eternal Son, to thee, \n\n            Whom with the Spirit we adore\n\n            For ever and\n            for evermore.\n            "
+        "1. Who bringest forth the light from Light;\n O Light, of light the fountain - spring;\n O Day, our days illumining;",
+        "2. Come, very Sun of truth and love,\n Come in thy radiance from above, \n And shed the Holy Spirit 's ray\n On all we think or do to - day.",
+        "3. Teach us to work with all our might;\n Put Satan 's fierce assaults to flight;\n Turn all to good that seems most ill;\n Help us our calling to fulfil.",
+        "4. O joyful be the livelong day,\n Our thoughts as pure as morning ray, \n Our faith like noonday's glowing height,\n Our souls undimmed by shades of night.",
+        "5. All praise to God the Father be,\n All praise, eternal Son, to thee, \n Whom with the Spirit we adore\n For ever and for evermore."
       ]
     },
-    "3": {
+    {
       "title": "Awake, my soul, and with the sun",
       "num": 3,
       "verses": [
-        "thy daily stage of duty run;\n\n            shake off dull sloth, and joyful rise\n\n            to pay thy morning sacrifice.\n            ",
-        "Redeem thy mis-spent time that's past,\n\n            and live this day as\n            if thy last;\n\n            improve thy talent with due care;\n\n            for the great day thyself prepare.\n            ",
-        "Let all thy converse be sincere,\n\n            thy conscience as the noon - day clear;\n\n            think how all - seeing God thy ways\n\n            and all thy secret thoughts surveys.\n            ",
-        "Wake, and lift up thyself, my heart,\n\n            and with the angels bear thy part, \n\n            who all night long unwearied sing\n\n            high praise to the eternal King.\n            ",
-        "Glory to thee, who safe hast kept\n\n            and hast refreshed me\n            while I slept;\n\n            grant, Lord, when I from death shall wake, \n\n            I may of endless light partake.\n            ",
-        "Lord, I my vows to thee renew;\n\n            disperse my sins as morning dew;\n\n            guard my first springs of thought and will, \n\n            and with thyself my spirit fill.\n            ",
-        "Direct, control, suggest, this day,\n\n            all I design or do or say;\n\n            that all my powers, with all their might, \n \n            in thy sole glory may unite.\n            ",
-        "Praise God, from whom all blessings flow,\n\n            praise him, all creatures here below, \n\n            praise him above, angelic host, \n\n            praise Father, Son and Holy Ghost.\n            "
+        "1. thy daily stage of duty run;\n shake off dull sloth, and joyful rise\n to pay thy morning sacrifice.",
+        "2. Redeem thy mis-spent time that's past,\n and live this day as\n if thy last;\n improve thy talent with due care;\n for the great day thyself prepare.",
+        "3. Let all thy converse be sincere,\n thy conscience as the noon - day clear;\n think how all - seeing God thy ways\n and all thy secret thoughts surveys.",
+        "4. Wake, and lift up thyself, my heart,\n and with the angels bear thy part, \n who all night long unwearied sing\n high praise to the eternal King.",
+        "5. Glory to thee, who safe hast kept\n and hast refreshed me\n while I slept;\n grant, Lord, when I from death shall wake,\n I may of endless light partake.",
+        "6. Lord, I my vows to thee renew;\n disperse my sins as morning dew;\n guard my first springs of thought and will,\n and with thyself my spirit fill.",
+        "7. Direct, control, suggest, this day,\n all I design or do or say;\n that all my powers, with all their might,\n in thy sole glory may unite.",
+        "8. Praise God, from whom all blessings flow,\n praise him, all creatures here below,\n praise him above, angelic host,\n praise Father, Son and Holy Ghost."
       ]
     },
-    "4": {
+    {
       "title": "New every morning is the love",
       "num": 4,
       "verses": [
-        "\n            our wakening and uprising prove;\n\n            through sleep and darkness safely brought,\n\n            restored to life and power and thought.\n            ",
-        "\n            New mercies, each returning day,\n\n            hover around us while we pray;\n\n            new perils past, new sins forgiven,\n\n            new thoughts of God, new hopes of heaven.\n            ",
-        "\n            If on our daily course our mind\n\n            be set to hallow all we find,\n\n            new treasures still, of countless price,\n\n            God will provide for sacrifice\n            ",
-        "\n            The trivial round, the common task,\n\n            will furnish all we need to ask,\n\n            room to deny ourselves, a road\n\n            to bring us daily nearer God.\n            ",
-        "\n            Only, O Lord, in thy dear love\n\n            fit us for perfect rest above;\n\n            and help us, this and every day,\n\n            to live more nearly as we pray.\n            "
+        "1. our wakening and uprising prove;\n through sleep and darkness safely brought,\n restored to life and power and thought.",
+        "2. New mercies, each returning day,\n hover around us while we pray;\n new perils past, new sins forgiven,\n new thoughts of God, new hopes of heaven.",
+        "3. If on our daily course our mind\n be set to hallow all we find,\n new treasures still, of countless price,\n God will provide for sacrifice",
+        "4. The trivial round, the common task,\n will furnish all we need to ask,\n room to deny ourselves, a road\n to bring us daily nearer God.",
+        "5. Only, O Lord, in thy dear love\n fit us for perfect rest above;\n and help us, this and every day,\n to live more nearly as we pray."
       ]
     },
-    "5": {
+    {
       "title": "My Father, for another night ",
       "num": 5,
       "verses": [
@@ -57,7 +58,7 @@
         "\n            My Father, for his sake, I pray,\n\n            thy child accept and bless;\n\n            and lead me by thy grace to-day\n\n            in paths of righteousness.\n            "
       ]
     },
-    "6": {
+    {
       "title": "At thy feet, O Christ, we lay",
       "num": 6,
       "verses": [
@@ -68,7 +69,7 @@
         "\n            Hear us, Lord, and that right soon;\n\n            Hear, and grant the choicest boon\n\n            That thy love can e'er impart,\n\n            Loyal singleness of heart:\n\n            So shall this and all our days,\n\n            Christ our God, show forth thy praise.\n            "
       ]
     },
-    "7": {
+    {
       "title": "Christ, whose glory fills the skies,",
       "num": 7,
       "verses": [
@@ -77,7 +78,7 @@
         "\n            Visit then this soul of mine,\n\n            pierce the gloom of sin and grief;\n\n            fill me, radiancy divine,\n\n            scatter all my unbelief;\n\n            more and more thyself display,\n\n            shining to the perfect day.\n            "
       ]
     },
-    "8": {
+    {
       "title": "God of the morning, at whose voice",
       "num": 8,
       "verses": [
@@ -86,7 +87,7 @@
         "\n            Give me thy counsel for my guide,\n\n            And then receive me to thy bliss:\n\n            All my desires and hopes beside\n\n            Are faint and cold, compared with this.\n            "
       ]
     },
-    "9": {
+    {
       "title": "Awaked from sleep we fall",
       "num": 9,
       "verses": [
@@ -95,7 +96,7 @@
         "\n            The Judge will come with speed,\n\n            And each man's deeds be known;\n\n            Our trembling cry shall rise on high\n\n            At midnight to thy throne:\n\n            Holy, Holy, Holy! King of Saints adored!\n\n            In the hour of judgement show us mercy, Lord.       \n            "
       ]
     },
-    "10": {
+    {
       "title": "Let hearts awaken, now the night is ended,",
       "num": 10,
       "verses": [
@@ -104,7 +105,7 @@
         "\n            Grant this, O Father, Son, and Holy Spirit,\n\n            Trinity blessed, who one Godhead sharest:\n\n            Thine be the glory through the whole creation\n\n            Now and for ever.\n            "
       ]
     },
-    "11": {
+    {
       "title": "Come, Holy Ghost, who ever One",
       "num": 11,
       "verses": [
@@ -113,7 +114,7 @@
         "\n            Almighty Father, hear our cry\n\n            Through Jesus Christ our Lord most high,\n\n            Who with the Holy Ghost and thee\n\n            Doth live and reign eternally.\n            "
       ]
     },
-    "12": {
+    {
       "title": "O God of truth, O Lord of might,",
       "num": 12,
       "verses": [
@@ -122,7 +123,7 @@
         "\n            Almighty Father, hear our cry\n\n            Through Jesus Christ our Lord most high,\n\n            Who with the Holy Ghost and thee\n\n            Doth live and reign eternally.\n            "
       ]
     },
-    "13": {
+    {
       "title": "Behold us, Lord, a little space",
       "num": 13,
       "verses": [
@@ -133,7 +134,7 @@
         "\n            Work shall be prayer, if all be wrought\n\n            As thou wouldst have it done,\n\n            And prayer, by thee inspired and taught,\n\n            Itself with work be one.\n            "
       ]
     },
-    "14": {
+    {
       "title": "O God, the world's sustaining force,",
       "num": 14,
       "verses": [
@@ -142,7 +143,7 @@
         "\n            Almighty Father, hear our cry\n\n            Through Jesus Christ our Lord most high,\n\n            Who with the Holy Ghost and thee\n\n            Doth live and reign eternally.\n            "
       ]
     },
-    "15": {
+    {
       "title": "O Trinity, most blessed light,",
       "num": 15,
       "verses": [
@@ -151,7 +152,7 @@
         "\n            All praise to God the Father be,\n\n            all praise, eternal Son, to thee,\n\n            whom with the Spirit we adore,\n            "
       ]
     },
-    "16": {
+    {
       "title": "Before the ending of the day,",
       "num": 16,
       "verses": [
@@ -160,7 +161,7 @@
         "\n            O Father, that we ask be done,\n\n            through Jesus Christ thine only Son,\n\n            who, with the Holy Ghost and thee,\n\n            doth live and reign eternally. Amen.\n            "
       ]
     },
-    "17": {
+    {
       "title": "O strength and stay upholding all creation,",
       "num": 17,
       "verses": [
@@ -169,7 +170,7 @@
         "\n            Hear us, O Father, gracious and forgiving,\n\n            through Jesus Christ thy co-eternal Word,\n\n            who with the Holy Ghost by all things living\n\n            now and to endless ages art adored.\n            "
       ]
     },
-    "18": {
+    {
       "title": "Hail, gladdening Light, of his pure glory poured",
       "num": 18,
       "verses": [
@@ -178,7 +179,7 @@
         "\n            Worthiest art thou at all times to be sung\n\n            with undefiled tongue,\n\n            Son of our God, giver of life, alone:\n\n            therefore in all the world thy glories, Lord, they own.\n            "
       ]
     },
-    "19": {
+    {
       "title": "The radiant morn hath passed away, ",
       "num": 19,
       "verses": [
@@ -189,7 +190,7 @@
         "\n            Where saints are clothed in spotless white,\n\n            And evening shadows never fall,\n\n            Where thou, eternal Light of Light\n\n            Art Lord of all.            \n            "
       ]
     },
-    "20": {
+    {
       "title": "At even, ere the sun was set,",
       "num": 20,
       "verses": [
@@ -202,7 +203,7 @@
         "\n            Thy touch has still its ancient power;\n\n            no word from thee can fruitless fall:\n\n            hear, in this solemn evening hour,\n\n            and in thy mercy heal us all.\n            "
       ]
     },
-    "21": {
+    {
       "title": "The day is past and over;",
       "num": 21,
       "verses": [
@@ -212,7 +213,7 @@
         "\n            Be thou my soul's preserver,\n\n            For thou alone dost know\n\n            How many are the perils\n\n            Through which I have to go:\n\n            O loving Jesu, hear my call,\n\n            And guard and save me from them all.\n            "
       ]
     },
-    "22": {
+    {
       "title": "Holy Father, cheer our way ",
       "num": 22,
       "verses": [
@@ -222,7 +223,7 @@
         "\n            Holy, blessed Trinity,\n\n            Darkness is not dark with thee;\n\n            Those thou keepest always see\n\n            Light at evening time.\n            "
       ]
     },
-    "23": {
+    {
       "title": "Glory to thee, my God, this night",
       "num": 23,
       "verses": [
@@ -234,7 +235,7 @@
         "   \n            Praise God, from whom all blessings flow,\n\n            praise him, all creatures here below,\n\n            praise him above, angelic host,\n\n            praise Father, Son, and Holy Ghost.\n            "
       ]
     },
-    "24": {
+    {
       "title": "Sun of my soul, thou Saviour dear,",
       "num": 24,
       "verses": [
@@ -246,7 +247,7 @@
         "   \n            Come near and bless us when we wake,\n\n            ere through the world our way we take;\n\n            till in the ocean of thy love\n\n            we lose ourselves in heaven above\n            "
       ]
     },
-    "25": {
+    {
       "title": "Through the day thy love has spared us;",
       "num": 25,
       "verses": [
@@ -254,7 +255,7 @@
         "\n            Pilgrims here on earth and stranges,\n\n            Dwelling in the midst of foes,\n\n            Us and ours preserve from dangers;\n\n            In thine arms may we repose,\n\n            And, when life's sad day is past,\n\n            Rest with thee in heaven at last.\n            "
       ]
     },
-    "26": {
+    {
       "title": "God, that madest earth and heaven,",
       "num": 26,
       "verses": [
@@ -262,7 +263,7 @@
         "\n            Guard us waking, guard us sleeping,\n\n            and, when we die,\n\n            may we in thy mighty keeping\n\n            all peaceful lie:\n\n            when the last dread call shall wake us,\n\n            do not thou our God forsake us,\n\n            but to reign in glory take us\n\n            with thee on high\n            "
       ]
     },
-    "27": {
+    {
       "title": "Abide with me; fast falls the eventide:",
       "num": 27,
       "verses": [
@@ -273,7 +274,7 @@
         "\n            Hold thou thy cross before my closing eyes;\n\n            shine through the gloom, and point me to the skies:\n\n            heaven's morning breaks, and earth's vain shadows flee;\n\n            in life, in death, O Lord, abide with me.\n            "
       ]
     },
-    "28": {
+    {
       "title": "Sweet Saviour, bless us ere we go;",
       "num": 28,
       "verses": [
@@ -284,7 +285,7 @@
         "\n            For all we love, the poor, the sad,\n\n            The sinful, unto thee we call;\n\n            O let thy mercy make us glad;\n\n            Thou art our Jesus, and our all.\n\n            Through life's long day and death's dark night\n\n            O gentle Jesus, be our Light.\n            "
       ]
     },
-    "29": {
+    {
       "title": "As now the sun's declining rays",
       "num": 29,
       "verses": [
@@ -293,7 +294,7 @@
         "\n            All glory to the Father be,\n\n            All glory to the Son,\n\n            All glory, Holy Ghost, to thee,\n\n            While endless ages run\n            "
       ]
     },
-    "30": {
+    {
       "title": "The sun is sinking fast,",
       "num": 30,
       "verses": [
@@ -306,7 +307,7 @@
         "\n            O sacred Trinity,\n\n            one Lord divine,\n\n            may I be ever his,\n\n            and he for ever mine\n            "
       ]
     },
-    "31": {
+    {
       "title": "Saviour, again to thy dear name we raise",
       "num": 31,
       "verses": [
@@ -316,7 +317,7 @@
         "   \n            Grant us thy peace throughout our earthly life,\n\n            our balm in sorrow, and our stay in strife;\n\n            then, when thy voice shall bid our conflict cease,\n\n            call us, O Lord, to thine eternal peace.\n            "
       ]
     },
-    "32": {
+    {
       "title": "And now the wants are told, that brought",
       "num": 32,
       "verses": [
@@ -329,7 +330,7 @@
         "\n            All glory to the Father be,\n\n            All glory to the Son,\n\n            All glory, Holy Ghost, to thee,\n\n            While endless ages run.            \n            "
       ]
     },
-    "33": {
+    {
       "title": "The day thou gavest, Lord, is ended,",
       "num": 33,
       "verses": [
@@ -340,7 +341,7 @@
         "\n            So be it, Lord; thy throne shall never,\n\n            like earth's proud empires, pass away;\n\n            thy kingdom stands, and grows for ever,\n\n            till all thy creatures own thy sway.\n            "
       ]
     },
-    "34": {
+    {
       "title": "The duteous day now closeth,",
       "num": 34,
       "verses": [
@@ -350,7 +351,7 @@
         "   \n            Awhile his mortal blindness\n\n            May miss God’s lovingkindness,\n\n            And grope in faithless strife:\n\n            But when life’s day is over\n\n            Shall death’s fair night discover\n\n            The fields of everlasting life.            \n            "
       ]
     },
-    "35": {
+    {
       "title": "Round me falls the night;",
       "num": 35,
       "verses": [
@@ -359,7 +360,7 @@
         "\n            Blessed, heavenly Light,\n\n            shining through earth's night;\n\n            voice, that oft of love hast told me;\n\n            arms, so strong to clasp and hold me;\n\n            thou thy watch wilt keep,\n\n            Saviour, o'er my sleep.\n            "
       ]
     },
-    "36": {
+    {
       "title": "And now another day is gone,",
       "num": 36,
       "verses": [
@@ -368,7 +369,7 @@
         "\n            With cheerful heart I close my eyes,\n\n            Since thou wilt not remove;\n\n            And in the morning let me rise\n\n            Rejoicing in thy love.\n            "
       ]
     },
-    "37": {
+    {
       "title": "Fast sinks the sun to rest,",
       "num": 37,
       "verses": [
@@ -378,7 +379,7 @@
         "\n            Be it not I who live\n\n            But God who lives in me,\n\n            Reigning and triumphing\n\n            In love's sweet majesty;\n\n            May he mine forever be,\n\n            God who One is in Trinity.            \n            "
       ]
     },
-    "38": {
+    {
       "title": "Our day of praise is done;",
       "num": 38,
       "verses": [
@@ -389,7 +390,7 @@
         "\n            A little while, and then\n\n            Shall come the glorious end;\n\n            And songs of angels and of men\n\n            In perfect praise shall blend.   \n            "
       ]
     },
-    "39": {
+    {
       "title": "On this day, the first of days,",
       "num": 39,
       "verses": [
@@ -402,7 +403,7 @@
         "\n            God, the one God of my heart,\n\n            I am thine, and mine thou art;\n\n            Take me, blessed One in Three,\n\n            Here I give myself to thee.\n            "
       ]
     },
-    "40": {
+    {
       "title": "Again the Lord's own day is here",
       "num": 40,
       "verses": [
@@ -413,7 +414,7 @@
         "\n            And therefore unto thee we sing,\n            O Lord of peace, eternal King;\n            thy love we praise, thy name adore,\n            both on this day and evermore.            \n            "
       ]
     },
-    "41": {
+    {
       "title": "O day of rest and gladness,",
       "num": 41,
       "verses": [
@@ -423,7 +424,7 @@
         "\n            New graces ever gaining\n\n            From this our day of rest,\n\n            We reach the rest remaining\n\n            To spirits of the blest:\n\n            To Holy Ghost be praises,\n\n            To Father, and to Son;\n\n            The Church her voice upraises\n\n            To thee, blest Three in One.\n            "
       ]
     },
-    "42": {
+    {
       "title": "This is the day of light:",
       "num": 42,
       "verses": [
@@ -434,7 +435,7 @@
         "\n            This is the first of days:\n\n            send forth thy quickening breath,\n\n            and wake dead souls to love and praise,\n\n            O vanquisher of death. \n            "
       ]
     },
-    "43": {
+    {
       "title": "This is the day the Lord hath made,",
       "num": 43,
       "verses": [
@@ -445,7 +446,7 @@
         "\n            Hosanna in the highest strains\n\n            the Church on earth can raise;\n\n            the highest heavens in which he reigns\n\n            shall give him nobler praise.\n            "
       ]
     },
-    "44": {
+    {
       "title": "Blest Creator of the light,",
       "num": 44,
       "verses": [
@@ -456,7 +457,7 @@
         "\n            Holy Father, hear our cry\n\n            Through thy Son our Lord most high,\n\n            Whom our thankful hearts adore\n\n            With the Spirit evermore.\n            "
       ]
     },
-    "45": {
+    {
       "title": "Creator of the starry height,",
       "num": 45,
       "verses": [
@@ -468,7 +469,7 @@
         "\n            To God the Father, God the Son,\n\n            and God the Spirit, Three in One,\n\n            praise, honour, might, and glory be\n\n            from age to age eternally. Amen.\n            "
       ]
     },
-    "46": {
+    {
       "title": "Behold, the Bridegroom draweth nigh!",
       "num": 46,
       "verses": [
@@ -478,7 +479,7 @@
         "\n            'Behold, the Bridegroom draweth near!'\n\n            The warning falls on every ear:\n\n            That night of dread shall come to all:\n\n            Behold, my soul, thy lamp so dim,\n\n            Rise, rise the smoking flax to trim;\n\n            Soon shalt thou hear his call. \n            "
       ]
     },
-    "47": {
+    {
       "title": "Hark, a thrilling voice is sounding;",
       "num": 47,
       "verses": [
@@ -489,7 +490,7 @@
         "\n            Honour, glory, might, and blessing\n\n            to the Father and the Son,\n\n            with the everlasting Spirit,\n\n            while eternal ages run. \n            "
       ]
     },
-    "48": {
+    {
       "title": "The advent of our King",
       "num": 48,
       "verses": [
@@ -500,7 +501,7 @@
         "\n            All glory to the Son\n\n            who comes to set us free,\n\n            with Father, Spirit, ever One,\n\n            through all eternity. \n            "
       ]
     },
-    "49": {
+    {
       "title": "O come, O come, Emmanuel,",
       "num": 49,
       "verses": [
@@ -510,16 +511,15 @@
         "\n            O come, O come, thou Lord of Might,\n            who to thy tribes, on Sinai's height,\n            in ancient times didst give the law\n            in cloud and majesty and awe:                   \n            "
       ]
     },
-    "50": {
+    {
       "title": "On Jordan's bank the Baptist's cry",
       "num": 50,
       "verses": [
         "   \n            announces that the Lord is nigh;\n            awake, and hearken, for he brings\n            glad tidings of the King of kings.\n            ",
         "\n            Then cleansed be every breast from sin;\n            make straight the way for God within;\n            prepare we in our hearts a home,\n            where such a mighty guest may come.       \n            ",
         "\n            For thou art our salvation, Lord,\n            our refuge, and our great reward;\n            without thy grace we waste away,\n            like flowers that wither and decay.            \n            ",
-        "\n            To heal the sick stretch out thine hand,\n            and bid the fallen sinner stand;\n            shine forth, and let thy light restore\n            earth's own true loveliness once more.                     \n            ",
-        "\n            All praise, eternal Son, to thee\n            whose advent doth thy people free,\n            whom with the Father we adore\n            and Holy Ghost for evermore. \n            "
+        "\n            To heal the sick stretch out thine hand,\n            and bid the fallen sinner stand;\n            shine forth, and let thy light restore\n            earth's own true loveliness once more.                     \n            "
       ]
     }
-  }
-]
+  ]
+}
