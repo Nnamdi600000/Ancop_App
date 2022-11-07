@@ -24,8 +24,8 @@
     <string name="hymns">Hymns</string>
     <string name="leaders">Leaders</string>
     <string name="library">Library</string>
-    <string name="chapeline">Chapeline</string>
-    <string name="chapeline_bio">About Chapeline</string>
+    <string name="reverend">Reverend</string>
+    <string name="reverend_bio">Biography</string>
     <string name="profile_image">Profile Image</string>
     <string name="username">Username</string>
     <string name="mobile_number">Mobile Number</string>
@@ -37,4 +37,15 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="refresh">Refresh</string>
     <string name="forgot_password">Forgot password?</string>
+    <string name="about">About</string>
+    <string name="chapeline_details">Ven. Dr. Ugochukwu Okafor was born into the family of Late Engr Emeka Okafor. He studied Mechanical Engineering at the Institute of Management and Technology Enugu, before he joined the pastoral ministry.
+Under the Episcopacy of Rt. Rev. Samuel Chibueze Amamchukwu Chukuka, the retired Bishop of Isuikwuato-Umunneochi, heattended the prestigious Trinity Theological College, Umuahia where he graduated with Diploma in Theology.
+He was made deacon in 2009 and subsequently priested in 2010. He was preferred Canon by the Retired Bishop of Isuikwuato-Umunneochi (Rt. Rev. Samuel C. A. Chukuka) in 2012. He was in December 2020 preferred Archdeacon by the Rt. Rev. Manasses C. I. Okere (JP) (2nd Bishop of Isuikwuato-Umunneochi). Ven. Dr. Ugochukwu Okafor has been the Bishop’s Secretary and Bishop’s Chaplain since August 2009 till date. In 2020, the Bishop Rt. Rev. Manasses C. I. Okere (JP) made him his Administrative Secretary.
+He bagged his Master of Missions Degree in 2016 and also in 2020, achieved his Doctor of Ministry Degree at Crowther Graduate Theological Seminary Abeokuta affiliated to Ekiti State University,
+Ven. Dr. Ugochukwu Okafor has attended several conferences and seminars wherein he delivered appropriately. He has also held several positions in the Church of God.
+He is an expositor of God’s word, a Bible Scholar, a Christian and presently the priest in charge of Chapel of Peace, Gregory University, Uturu, Diocese of Isuikwuato-Umunneochi. He is married to His heartthrob, Mrs. Chinwe Ugo Okafor with three lovely children. Chimdiegwu, Divine and David.
+</string>
+    <string name="chapeline_name">Ven. Dr. Ugochukwu Okafor</string>
+    <string name="call_chapeline_floating_button">Call chapeline floating button</string>
+    <string name="message_chapeline_floating_button">Message chapeline floating button</string>
 </resources>

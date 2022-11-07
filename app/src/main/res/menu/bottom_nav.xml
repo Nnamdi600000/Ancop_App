@@ -21,8 +21,8 @@
         android:title="@string/library" />
 
     <item
-        android:id="@+id/chapeline_bio"
+        android:id="@+id/reverend_bio"
         android:icon="@drawable/ic_baseline_account_circle_24_light"
-        android:title="@string/chapeline" />
+        android:title="@string/reverend" />
 
 </menu>

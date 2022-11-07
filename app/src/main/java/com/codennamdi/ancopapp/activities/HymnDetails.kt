@@ -45,8 +45,8 @@ class HymnDetails : AppCompatActivity() {
                     }
                     (3) -> {
                         binding.textViewHymnVerse1.text = hymnItem.verses[0]
-                        binding.textViewHymnVerse1.text = hymnItem.verses[1]
-                        binding.textViewHymnVerse1.text = hymnItem.verses[2]
+                        binding.textViewHymnVerse2.text = hymnItem.verses[1]
+                        binding.textViewHymnVerse3.text = hymnItem.verses[2]
                     }
                     (4) -> {
                         binding.textViewHymnVerse1.text = hymnItem.verses[0]

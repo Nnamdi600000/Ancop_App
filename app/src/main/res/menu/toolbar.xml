@@ -9,6 +9,10 @@
         android:title="@string/settings" />
 
     <item
+        android:id="@+id/about"
+        android:title="@string/about" />
+
+    <item
         android:id="@+id/sign_out"
         android:title="@string/sign_out" />
 </menu>

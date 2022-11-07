@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.commit
 import com.bumptech.glide.Glide
@@ -53,13 +54,17 @@ class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
             true
         }
 
+        (R.id.about) -> {
+            Toast.makeText(this@MainActivity, "About App", Toast.LENGTH_LONG).show()
+            true
+        }
+
         (R.id.sign_out) -> {
             FirebaseAuth.getInstance().signOut()
             startActivity(Intent(this@MainActivity, GetStartedActivity::class.java))
             finish()
             true
         }
-
         else -> super.onOptionsItemSelected(item)
     }
 
@@ -80,7 +85,7 @@ class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
             clickedLibraryNavBtn()
         }
 
-        (R.id.chapeline_bio) -> {
+        (R.id.reverend_bio) -> {
             clickedChapelineBioNavBtn()
         }
 
@@ -123,7 +128,7 @@ class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
         supportFragmentManager.commit {
             replace(R.id.fragment_container_view_id, ChapelineFragment())
         }
-        title = getString(R.string.chapeline_bio)
+        title = getString(R.string.reverend_bio)
         return true
     }
 
