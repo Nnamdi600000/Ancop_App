@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Ancop_Admin</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home">Events</string>
+    <string name="leaders">Leaders</string>
+    <string name="library">Books</string>
+    <string name="add_event">Add event</string>
+    <string name="add_leaders">Add leader</string>
+    <string name="add_books">Add book</string>
 </resources>
