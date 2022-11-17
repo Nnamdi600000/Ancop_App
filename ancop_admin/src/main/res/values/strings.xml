@@ -8,4 +8,16 @@
     <string name="add_event">Add event</string>
     <string name="add_leaders">Add leader</string>
     <string name="add_books">Add book</string>
+    <string name="event_details">Event details</string>
+    <string name="add_image_button">Add image button</string>
+    <string name="leader_name">Name</string>
+    <string name="leader_position">Position</string>
+    <string name="mobile_number">Mobile number</string>
+    <string name="add">Add</string>
+    <string name="leader_image">leader image</string>
+    <string name="book_name">Name</string>
+    <string name="book_title">Book title</string>
+    <string name="book_available">Available</string>
+    <string name="add_btn">Add</string>
+    <string name="event_image">Event image</string>
 </resources>
