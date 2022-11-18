@@ -48,7 +48,7 @@
             </FrameLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/text_input_layout_leader_name_id"
+                android:id="@+id/text_input_layout_book_title_id"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -59,7 +59,7 @@
                 app:layout_constraintTop_toBottomOf="@id/frame_layout_id">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/text_field_leader_name_id"
+                    android:id="@+id/text_field_book_title_id"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textMultiLine|textCapWords"
@@ -68,7 +68,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/save_updated_profile_details_btn"
+                android:id="@+id/add_book_btn"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_marginStart="30dp"

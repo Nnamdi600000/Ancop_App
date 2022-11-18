@@ -7,13 +7,16 @@ import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
 import android.provider.Settings
+import android.text.TextUtils
 import android.util.Log
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import com.bumptech.glide.Glide
 import com.codennamdi.ancop_admin.databinding.ActivityAddBookBinding
+import com.google.android.material.snackbar.Snackbar
 import com.karumi.dexter.Dexter
 import com.karumi.dexter.MultiplePermissionsReport
 import com.karumi.dexter.PermissionToken
@@ -23,17 +26,17 @@ import java.io.IOException
 
 class AddBookActivity : AppCompatActivity() {
     private lateinit var binding: ActivityAddBookBinding
-    private var profileImageResultData: Uri? = null
+    private var bookImageResultData: Uri? = null
 
     private val openGalleryLauncher: ActivityResultLauncher<Intent> =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
             if (result.resultCode == RESULT_OK && result.data != null) {
-                profileImageResultData = result.data?.data!!
-                Log.e("Saved image", "$profileImageResultData")
+                bookImageResultData = result.data?.data!!
+                Log.e("Saved image", "$bookImageResultData")
                 try {
                     Glide
                         .with(this@AddBookActivity)
-                        .load(profileImageResultData)
+                        .load(bookImageResultData)
                         .centerCrop()
                         .placeholder(R.drawable.profile_place_holder)
                         .into(binding.bookImageImageViewId)
@@ -50,6 +53,10 @@ class AddBookActivity : AppCompatActivity() {
 
         binding.addBookImageBtnId.setOnClickListener {
             choosePhotoFromGallery()
+        }
+
+        binding.addBookBtn.setOnClickListener {
+            addLeaderDetailsToFirebase()
         }
     }
 
@@ -96,5 +103,57 @@ class AddBookActivity : AppCompatActivity() {
             .setNegativeButton("Cancel") { dialog, _ ->
                 dialog.dismiss()
             }.show()
+    }
+
+    private fun validateEventDetailsField(): Boolean {
+        return when {
+            (bookImageResultData == null) -> {
+                showErrorSnackBar("Please select an image from your gallery")
+                return false
+            }
+
+            TextUtils.isEmpty(binding.textFieldBookTitleId.toString()) -> {
+                showErrorSnackBar("Please enter a book title")
+                return false
+            }
+
+            else -> {
+                return true
+            }
+        }
+    }
+
+    private fun addLeaderDetailsToFirebase() {
+        val bookTitle = binding.textFieldBookTitleId.text.toString().trim { it <= ' ' }
+
+        if (validateEventDetailsField()) {
+            showErrorSnackBarGreen("Added details")
+        }
+    }
+
+    private fun showErrorSnackBar(message: String) {
+        val snackBar =
+            Snackbar.make(findViewById(android.R.id.content), message, Snackbar.LENGTH_LONG)
+        val snackBarView = snackBar.view
+        snackBarView.setBackgroundColor(
+            ContextCompat.getColor(
+                this@AddBookActivity,
+                R.color.red
+            )
+        )
+        snackBar.show()
+    }
+
+    private fun showErrorSnackBarGreen(message: String) {
+        val snackBar =
+            Snackbar.make(findViewById(android.R.id.content), message, Snackbar.LENGTH_LONG)
+        val snackBarView = snackBar.view
+        snackBarView.setBackgroundColor(
+            ContextCompat.getColor(
+                this@AddBookActivity,
+                R.color.green
+            )
+        )
+        snackBar.show()
     }
 }

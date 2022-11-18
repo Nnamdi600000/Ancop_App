@@ -7,13 +7,16 @@ import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
 import android.provider.Settings
+import android.text.TextUtils
 import android.util.Log
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import com.bumptech.glide.Glide
 import com.codennamdi.ancop_admin.databinding.ActivityAddEventBinding
+import com.google.android.material.snackbar.Snackbar
 import com.karumi.dexter.Dexter
 import com.karumi.dexter.MultiplePermissionsReport
 import com.karumi.dexter.PermissionToken
@@ -23,17 +26,17 @@ import java.io.IOException
 
 class AddEventActivity : AppCompatActivity() {
     private lateinit var binding: ActivityAddEventBinding
-    private var profileImageResultData: Uri? = null
+    private var eventImageResultData: Uri? = null
 
     private val openGalleryLauncher: ActivityResultLauncher<Intent> =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
             if (result.resultCode == RESULT_OK && result.data != null) {
-                profileImageResultData = result.data?.data!!
-                Log.e("Saved image", "$profileImageResultData")
+                eventImageResultData = result.data?.data!!
+                Log.e("Saved image", "$eventImageResultData")
                 try {
                     Glide
                         .with(this@AddEventActivity)
-                        .load(profileImageResultData)
+                        .load(eventImageResultData)
                         .centerCrop()
                         .placeholder(R.drawable.profile_place_holder)
                         .into(binding.eventImageImageViewId)
@@ -50,6 +53,10 @@ class AddEventActivity : AppCompatActivity() {
 
         binding.addEventImageBtn.setOnClickListener {
             choosePhotoFromGallery()
+        }
+
+        binding.addEventDetailsBtn.setOnClickListener {
+            addEventDetailsToFirebase()
         }
     }
 
@@ -96,5 +103,57 @@ class AddEventActivity : AppCompatActivity() {
             .setNegativeButton("Cancel") { dialog, _ ->
                 dialog.dismiss()
             }.show()
+    }
+
+    private fun validateEventDetailsField(eventDetails: String): Boolean {
+        return when {
+            (eventImageResultData == null) -> {
+                showErrorSnackBar("Please select an image from your gallery")
+                return false
+            }
+
+            TextUtils.isEmpty(eventDetails) -> {
+                showErrorSnackBar("Please enter your event details")
+                return false
+            }
+
+            else -> {
+                return true
+            }
+        }
+    }
+
+    private fun addEventDetailsToFirebase() {
+        val textEventDetails = binding.textFieldEventDetails.text.toString().trim { it <= ' ' }
+
+        if (validateEventDetailsField(textEventDetails)) {
+            showErrorSnackBarGreen("Added details")
+        }
+    }
+
+    private fun showErrorSnackBar(message: String) {
+        val snackBar =
+            Snackbar.make(findViewById(android.R.id.content), message, Snackbar.LENGTH_LONG)
+        val snackBarView = snackBar.view
+        snackBarView.setBackgroundColor(
+            ContextCompat.getColor(
+                this@AddEventActivity,
+                R.color.red
+            )
+        )
+        snackBar.show()
+    }
+
+    private fun showErrorSnackBarGreen(message: String) {
+        val snackBar =
+            Snackbar.make(findViewById(android.R.id.content), message, Snackbar.LENGTH_LONG)
+        val snackBarView = snackBar.view
+        snackBarView.setBackgroundColor(
+            ContextCompat.getColor(
+                this@AddEventActivity,
+                R.color.green
+            )
+        )
+        snackBar.show()
     }
 }
