@@ -10,7 +10,7 @@ import androidx.fragment.app.commit
 import com.bumptech.glide.Glide
 import com.codennamdi.ancopapp.R
 import com.codennamdi.ancopapp.databinding.ActivityMainBinding
-import com.codennamdi.ancopapp.firebase.FirestoreClass
+import com.codennamdi.ancopapp.firebase.FireStoreClass
 import com.codennamdi.ancopapp.fragments.*
 import com.codennamdi.ancopapp.models.User
 import com.google.android.material.navigation.NavigationBarView
@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
         setSupportActionBar(binding.mainActivityToolbarId)
         binding.bottomNav.setOnItemSelectedListener(this)
 
-        FirestoreClass().loadUserData(this@MainActivity)
+        FireStoreClass().loadUserData(this@MainActivity)
         setOnClickListener()
     }
 
@@ -45,7 +45,7 @@ class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
 
     override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
         (R.id.refresh) -> {
-            FirestoreClass().loadUserData(this@MainActivity)
+            FireStoreClass().loadUserData(this@MainActivity)
             true
         }
 

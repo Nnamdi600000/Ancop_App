@@ -8,7 +8,7 @@ import android.util.Log
 import android.widget.Toast
 import com.codennamdi.ancopapp.R
 import com.codennamdi.ancopapp.databinding.ActivityLoginBinding
-import com.codennamdi.ancopapp.firebase.FirestoreClass
+import com.codennamdi.ancopapp.firebase.FireStoreClass
 import com.codennamdi.ancopapp.models.User
 import com.google.firebase.auth.FirebaseAuth
 
@@ -71,7 +71,7 @@ class LoginActivity : BaseActivity() {
                     if (task.isSuccessful) {
                         hideProgressDialog()
                         // Sign in success, update UI with the signed-in user's information
-                        FirestoreClass().loadUserData(this@LoginActivity)
+                        FireStoreClass().loadUserData(this@LoginActivity)
                     } else {
                         hideProgressDialog()
                         // If sign in fails, display a message to the user.

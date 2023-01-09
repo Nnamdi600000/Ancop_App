@@ -1,4 +1,4 @@
-package com.codennamdi.ancop_admin
+package com.codennamdi.ancop_admin.activities
 
 import android.Manifest
 import android.content.ActivityNotFoundException
@@ -15,7 +15,8 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.bumptech.glide.Glide
-import com.codennamdi.ancop_admin.databinding.ActivityAddEventBinding
+import com.codennamdi.ancop_admin.R
+import com.codennamdi.ancop_admin.databinding.ActivityAddLeaderBinding
 import com.google.android.material.snackbar.Snackbar
 import com.karumi.dexter.Dexter
 import com.karumi.dexter.MultiplePermissionsReport
@@ -24,22 +25,22 @@ import com.karumi.dexter.listener.PermissionRequest
 import com.karumi.dexter.listener.multi.MultiplePermissionsListener
 import java.io.IOException
 
-class AddEventActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityAddEventBinding
-    private var eventImageResultData: Uri? = null
+class AddLeaderActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityAddLeaderBinding
+    private var leaderImageResultData: Uri? = null
 
     private val openGalleryLauncher: ActivityResultLauncher<Intent> =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
             if (result.resultCode == RESULT_OK && result.data != null) {
-                eventImageResultData = result.data?.data!!
-                Log.e("Saved image", "$eventImageResultData")
+                leaderImageResultData = result.data?.data!!
+                Log.e("Saved image", "$leaderImageResultData")
                 try {
                     Glide
-                        .with(this@AddEventActivity)
-                        .load(eventImageResultData)
+                        .with(this@AddLeaderActivity)
+                        .load(leaderImageResultData)
                         .centerCrop()
                         .placeholder(R.drawable.profile_place_holder)
-                        .into(binding.eventImageImageViewId)
+                        .into(binding.leaderImageImageViewId)
                 } catch (e: IOException) {
                     e.printStackTrace()
                 }
@@ -48,20 +49,20 @@ class AddEventActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityAddEventBinding.inflate(layoutInflater)
+        binding = ActivityAddLeaderBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.addEventImageBtn.setOnClickListener {
+        binding.addLeaderImageBtnId.setOnClickListener {
             choosePhotoFromGallery()
         }
 
-        binding.addEventDetailsBtn.setOnClickListener {
-            addEventDetailsToFirebase()
+        binding.addLeaderBtn.setOnClickListener {
+            addLeaderDetailsToFirebase()
         }
     }
 
     private fun choosePhotoFromGallery() {
-        Dexter.withContext(this@AddEventActivity)
+        Dexter.withContext(this@AddLeaderActivity)
             .withPermissions(
                 Manifest.permission.READ_EXTERNAL_STORAGE,
                 Manifest.permission.READ_EXTERNAL_STORAGE
@@ -87,7 +88,7 @@ class AddEventActivity : AppCompatActivity() {
     }
 
     private fun displayRationalDialog() {
-        AlertDialog.Builder(this@AddEventActivity)
+        AlertDialog.Builder(this@AddLeaderActivity)
             .setMessage("You can't access the gallery because you did not enable the permission, You can do that by heading to the app settings.")
 
             .setPositiveButton("GOTO SETTINGS") { _, _ ->
@@ -105,15 +106,20 @@ class AddEventActivity : AppCompatActivity() {
             }.show()
     }
 
-    private fun validateEventDetailsField(eventDetails: String): Boolean {
+    private fun validateEventDetailsField(): Boolean {
         return when {
-            (eventImageResultData == null) -> {
+            (leaderImageResultData == null) -> {
                 showErrorSnackBar("Please select an image from your gallery")
                 return false
             }
 
-            TextUtils.isEmpty(eventDetails) -> {
-                showErrorSnackBar("Please enter your event details")
+            TextUtils.isEmpty(binding.textFieldLeaderNameId.toString()) -> {
+                showErrorSnackBar("Please enter the leader's name")
+                return false
+            }
+
+            TextUtils.isEmpty(binding.textFieldLeaderPosition.toString()) -> {
+                showErrorSnackBar("Please enter the leader's position")
                 return false
             }
 
@@ -123,10 +129,11 @@ class AddEventActivity : AppCompatActivity() {
         }
     }
 
-    private fun addEventDetailsToFirebase() {
-        val textEventDetails = binding.textFieldEventDetails.text.toString().trim { it <= ' ' }
+    private fun addLeaderDetailsToFirebase() {
+        val leaderName = binding.textFieldLeaderNameId.text.toString().trim { it <= ' ' }
+        val leaderPosition = binding.textFieldLeaderPosition.text.toString().trim { it <= ' ' }
 
-        if (validateEventDetailsField(textEventDetails)) {
+        if (validateEventDetailsField()) {
             showErrorSnackBarGreen("Added details")
         }
     }
@@ -137,7 +144,7 @@ class AddEventActivity : AppCompatActivity() {
         val snackBarView = snackBar.view
         snackBarView.setBackgroundColor(
             ContextCompat.getColor(
-                this@AddEventActivity,
+                this@AddLeaderActivity,
                 R.color.red
             )
         )
@@ -150,7 +157,7 @@ class AddEventActivity : AppCompatActivity() {
         val snackBarView = snackBar.view
         snackBarView.setBackgroundColor(
             ContextCompat.getColor(
-                this@AddEventActivity,
+                this@AddLeaderActivity,
                 R.color.green
             )
         )

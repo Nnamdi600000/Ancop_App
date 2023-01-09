@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="@dimen/dimen_35"
-    tools:context=".activities.RegisterActivity">
+    tools:context=".activities.AdminRegisterActivity">
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/text_input_layout_full_name_id"
@@ -65,7 +65,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_register_activity_register"
+        android:id="@+id/btn_register_admin"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dimen_60"
         android:layout_marginStart="@dimen/dimen_25"
@@ -73,35 +73,6 @@
         android:layout_marginBottom="@dimen/dimen_10"
         android:text="@string/register"
         app:cornerRadius="10dp"
-        app:layout_constraintBottom_toTopOf="@id/linear_layout_id" />
-
-    <LinearLayout
-        android:id="@+id/linear_layout_id"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/have_an_account"
-            android:textSize="@dimen/dimen_17_sp"
-            android:textStyle="normal" />
-
-        <TextView
-            android:id="@+id/text_view_login"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/dimen_5"
-            android:text="@string/login"
-            android:textColor="@color/blue"
-            android:textSize="@dimen/dimen_17_sp"
-            android:textStyle="bold" />
-
-    </LinearLayout>
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

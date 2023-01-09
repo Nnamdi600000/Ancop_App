@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.codennamdi.ancop_admin">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-
 
     <application
         android:allowBackup="true"
@@ -13,35 +13,55 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AncopApp">
         <activity
-            android:name=".AddBookActivity"
+            android:name=".activities.AdminRegisterActivity"
+            android:exported="false"
+            android:label="Register Admin"
+            android:parentActivityName=".activities.MainActivity">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
+        <activity
+            android:name=".activities.AdminLoginActivity"
+            android:exported="false">
+
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
+        <activity
+            android:name=".activities.AddBookActivity"
             android:exported="false"
             android:label="@string/add_books"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".activities.MainActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".AddLeaderActivity"
+            android:name=".activities.AddLeaderActivity"
             android:exported="false"
             android:label="@string/add_leaders"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".activities.MainActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".AddEventActivity"
+            android:name=".activities.AddEventActivity"
             android:exported="false"
             android:label="Add event"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".activities.MainActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
+            android:name=".activities.MainActivity"
+            android:exported="true"
+            android:label="Login Admin">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -53,4 +73,5 @@
                 android:value="" />
         </activity>
     </application>
+
 </manifest>

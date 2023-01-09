@@ -1,4 +1,4 @@
-package com.codennamdi.ancop_admin
+package com.codennamdi.ancop_admin.activities
 
 import android.Manifest
 import android.content.ActivityNotFoundException
@@ -15,6 +15,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.bumptech.glide.Glide
+import com.codennamdi.ancop_admin.R
 import com.codennamdi.ancop_admin.databinding.ActivityAddBookBinding
 import com.google.android.material.snackbar.Snackbar
 import com.karumi.dexter.Dexter

@@ -1,4 +1,4 @@
-package com.codennamdi.ancop_admin
+package com.codennamdi.ancop_admin.fragments
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.codennamdi.ancop_admin.activities.AddEventActivity
 import com.codennamdi.ancop_admin.databinding.FragmentHomeAdminBinding
 
 class HomeFragmentAdmin : Fragment() {

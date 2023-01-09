@@ -19,7 +19,7 @@ import androidx.appcompat.app.AlertDialog
 import com.bumptech.glide.Glide
 import com.codennamdi.ancopapp.R
 import com.codennamdi.ancopapp.databinding.ActivityUserProfileBinding
-import com.codennamdi.ancopapp.firebase.FirestoreClass
+import com.codennamdi.ancopapp.firebase.FireStoreClass
 import com.codennamdi.ancopapp.models.User
 import com.codennamdi.ancopapp.utils.Constants
 import com.google.firebase.storage.FirebaseStorage
@@ -127,7 +127,7 @@ class UserProfileActivity : BaseActivity() {
         supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_ios_24)
         setUpClickListeners()
 
-        FirestoreClass().loadUserData(this@UserProfileActivity)
+        FireStoreClass().loadUserData(this@UserProfileActivity)
     }
 
     private fun setUpClickListeners() {
@@ -327,7 +327,7 @@ class UserProfileActivity : BaseActivity() {
         }
 
         if (anyChangesMade)
-            FirestoreClass().updateUserProfileData(this, userHashMap)
+            FireStoreClass().updateUserProfileData(this, userHashMap)
         hideProgressDialog()
     }
 

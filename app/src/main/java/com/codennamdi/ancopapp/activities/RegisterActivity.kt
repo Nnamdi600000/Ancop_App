@@ -6,7 +6,7 @@ import android.text.TextUtils
 import android.widget.Toast
 import com.codennamdi.ancopapp.R
 import com.codennamdi.ancopapp.databinding.ActivityRegisterBinding
-import com.codennamdi.ancopapp.firebase.FirestoreClass
+import com.codennamdi.ancopapp.firebase.FireStoreClass
 import com.codennamdi.ancopapp.models.User
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -71,7 +71,7 @@ class RegisterActivity : BaseActivity() {
                         val firebaseUser: FirebaseUser = task.result!!.user!!
                         val registeredEmail = firebaseUser.email!!
                         val user = User(firebaseUser.uid, fullName, registeredEmail)
-                        FirestoreClass().registerUser(this@RegisterActivity, user)
+                        FireStoreClass().registerUser(this@RegisterActivity, user)
                         // finish()
                     } else {
                         Toast.makeText(this, task.exception!!.message, Toast.LENGTH_SHORT).show()

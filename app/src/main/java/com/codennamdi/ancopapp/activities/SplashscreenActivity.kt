@@ -6,7 +6,7 @@ import android.os.Handler
 import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
 import com.codennamdi.ancopapp.R
-import com.codennamdi.ancopapp.firebase.FirestoreClass
+import com.codennamdi.ancopapp.firebase.FireStoreClass
 
 class SplashscreenActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -14,7 +14,7 @@ class SplashscreenActivity : AppCompatActivity() {
         setContentView(R.layout.activity_splashscreen)
 
         Handler(Looper.getMainLooper()).postDelayed({
-            val currentUserId = FirestoreClass().getCurrentUserId()
+            val currentUserId = FireStoreClass().getCurrentUserId()
             if (currentUserId.isNotBlank()) {
                 startActivity(Intent(this@SplashscreenActivity, MainActivity::class.java))
                 finish()

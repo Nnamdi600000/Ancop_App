@@ -20,4 +20,17 @@
     <string name="book_available">Available</string>
     <string name="add_btn">Add</string>
     <string name="event_image">Event image</string>
+    <string name="please_wait">Please_Wait</string>
+    <string name="upload_event_successful">Event has been added successfully</string>
+    <string name="welcome_admin">Welcome Admin</string>
+    <string name="this_app_is_decided_to_the_ancop_family_gregory_university">This_app_is_decided_to_the_ancop_family_gregory_university</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="user_image_design">User image design</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="no_account_yet">No account yet?</string>
+    <string name="create_one">Create one</string>
+    <string name="full_name">Full name</string>
 </resources>
