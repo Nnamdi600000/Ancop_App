@@ -1,8 +1,10 @@
 package com.codennamdi.ancop_admin.firestore
 
+import android.app.Activity
 import android.util.Log
 import com.codennamdi.ancop_admin.activities.AddEventActivity
 import com.codennamdi.ancop_admin.activities.AdminRegisterActivity
+import com.codennamdi.ancop_admin.activities.MainActivity
 import com.codennamdi.ancop_admin.model.Event
 import com.codennamdi.ancop_admin.model.UserAdmin
 import com.codennamdi.ancop_admin.utils.Constants
@@ -21,6 +23,21 @@ class FireStoreClass {
             }
             .addOnFailureListener { e ->
                 Log.e(registerActivity.javaClass.simpleName, "Error writing the document", e)
+            }
+    }
+
+    fun loadAdminData(activity: Activity) {
+        mFireStoreAdmin.collection(Constants.USERS_ADMIN)
+            .document(getCurrentUserID()).get()
+            .addOnSuccessListener { document ->
+                val loggedInAdmin = document.toObject(UserAdmin::class.java)
+
+                when (activity) {
+                    is MainActivity -> {
+                        if (loggedInAdmin !=null)
+                            activity.logInAdminSuccessFul()
+                    }
+                }
             }
     }
 

@@ -13,6 +13,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AncopApp">
         <activity
+            android:name=".activities.HomeActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".activities.AdminRegisterActivity"
             android:exported="false"
             android:label="Register Admin"
@@ -21,16 +28,6 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
-        <activity
-            android:name=".activities.AdminLoginActivity"
-            android:exported="false">
-
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-
         <activity
             android:name=".activities.AddBookActivity"
             android:exported="false"

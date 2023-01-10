@@ -29,7 +29,6 @@ class AdminRegisterActivity : AppCompatActivity() {
 
     private fun setUpOnClickListener() {
         binding.btnRegisterAdmin.setOnClickListener {
-            Toast.makeText(this@AdminRegisterActivity, "Registered", Toast.LENGTH_LONG).show()
             registerAdmin()
         }
     }
@@ -113,7 +112,7 @@ class AdminRegisterActivity : AppCompatActivity() {
         progressDialog.show()
     }
 
-    fun hideProgressDialog() {
+    private fun hideProgressDialog() {
         progressDialog.dismiss()
     }
 }

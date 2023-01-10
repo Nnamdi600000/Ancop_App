@@ -85,7 +85,7 @@ class LoginActivity : BaseActivity() {
         }
     }
 
-    fun loginSuccess(user: User) {
+    fun loginSuccess() {
         Toast.makeText(this, "Logged in", Toast.LENGTH_LONG).show()
         startActivity(Intent(this@LoginActivity, MainActivity::class.java))
         finish()
